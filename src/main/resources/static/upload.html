@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form
+        action="/upload"
+        class="form"
+        enctype="multipart/form-data"
+        method="post"
+>
+    <label for="username">
+        姓名
+        <input name="username" type="text">
+    </label>
+    <label for="age">
+        年龄
+        <input name="age" type="text">
+    </label>
+    <label for="image">
+        头像
+        <input name="image" type="file">
+    </label>
+    <input class="button" type="submit"/>
+</form>
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: fit-content;
+    }
+</style>
+</body>
+</html>
