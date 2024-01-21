@@ -13,7 +13,7 @@ import org.springframework.util.StringUtils;
 import java.io.IOException;
 
 @Slf4j
-@WebFilter(urlPatterns = "/*")
+// @WebFilter(urlPatterns = "/*")
 // @WebFilter(urlPatterns = "/login")
 // @WebFilter(urlPatterns = "/emps/*")
 public class AuthFilter implements Filter {
