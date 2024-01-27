@@ -63,7 +63,7 @@ public class EmpServiceImpl implements EmpService {
 	}
 
 	@Override
-	public int delete(List<Integer> ids) {
-		return empMapper.delete(ids);
+	public void delete(List<Integer> ids) {
+		empMapper.delete(ids);
 	}
 }

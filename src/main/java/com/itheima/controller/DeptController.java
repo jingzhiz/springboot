@@ -57,12 +57,11 @@ public class DeptController {
 	}
 
 	@DeleteMapping("/{id}")
-	public Result delete(@PathVariable Integer id) {
+	public Result delete(@PathVariable Integer id) throws Exception {
 		log.info("http Delete /depts: 请求进入，根据id删除部门");
-		if (deptService.delete(id) > 0) {
-			return Result.success();
-		} else {
-			return Result.error("删除失败");
-		}
+
+		deptService.delete(id);
+
+		return Result.success();
 	}
 }

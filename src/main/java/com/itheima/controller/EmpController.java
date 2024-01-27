@@ -68,13 +68,9 @@ public class EmpController {
 	}
 
 	@DeleteMapping("/{ids}")
-	public Result delete(@PathVariable List<Integer> ids) {
+	public Result delete(@PathVariable List<Integer> ids) throws Exception {
 		log.info("http delete /emps: 请求进入，删除员工");
-		int i = empService.delete(ids);
-		if (i > 0) {
-			return Result.success();
-		} else {
-			return Result.error("删除失败");
-		}
+		empService.delete(ids);
+		return Result.success();
 	}
 }

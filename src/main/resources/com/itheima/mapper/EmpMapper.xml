@@ -79,4 +79,8 @@
             #{id}
         </foreach>
     </delete>
+
+    <delete id="deleteByDeptId">
+        delete from emp where dept_id = #{deptId}
+    </delete>
 </mapper>

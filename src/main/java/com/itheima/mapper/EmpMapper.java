@@ -29,4 +29,6 @@ public interface EmpMapper {
 	int update(Emp emp);
 
 	int delete(List<Integer> ids);
+
+	void deleteByDeptId(Integer deptId);
 }

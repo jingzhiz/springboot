@@ -38,8 +38,6 @@ public interface DeptService {
 
 	/**
 	 * 根据id删除部门数据
-	 *
-	 * @return
 	 */
-	int delete(Integer id);
+	void delete(Integer id) throws Exception;
 }

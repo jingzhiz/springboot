@@ -58,5 +58,5 @@ public interface EmpService {
 	 * @param ids
 	 * @return
 	 */
-	int delete(List<Integer> ids);
+	void delete(List<Integer> ids) throws Exception;
 }
