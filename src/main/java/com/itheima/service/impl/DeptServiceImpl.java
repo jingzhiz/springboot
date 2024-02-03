@@ -26,7 +26,7 @@ public class DeptServiceImpl implements DeptService {
 
 	@Override
 	public List<Dept> list() {
-		int i = 1 / 0;
+		// int i = 1 / 0;
 		return deptMapper.list();
 	}
 
