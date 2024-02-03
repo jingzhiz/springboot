@@ -6,6 +6,8 @@ import com.itheima.pojo.Result;
 import com.itheima.service.DeptService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -14,6 +16,9 @@ import java.util.List;
  * 部门管理Controller
  */
 @Slf4j
+// @Lazy // 延迟到第一次使用时创建bean对象
+// @Scope("singleton") // 默认单例模式
+@Scope("prototype") // 每次注入时生成一个新的实例
 @RestController
 @RequestMapping("/depts")
 public class DeptController {
